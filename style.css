@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, html,body{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+	font-family:'Poppins', sans-serif;
+	perspective:800px;
+}
+body{
+	background-color:#227093;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	min-height:100vh;
+}
+.preloarder{
+	position:relative;
+	width:125px;
+	height:105px;
+	display:inline-block;
+	animation:Loading 1.5s linear infinite;
+}
+.preloarder .SpanLoader{
+	display:flex;
+	justify-content: center;
+}
+.preloarder span{
+	position:absolute;
+	width:40px;
+	height:15px;
+	background:#ececec;
+	transform-origin:center 50px;
+	box-shadow:0px 0px 10px rgba(0,0,0,.5);
+}
+.preloarder span:first-child{
+	transform:rotate(0deg) skewY(10deg);
+}
+.preloarder span:nth-child(2){
+	transform:rotate(60deg) skewY(10deg);
+}
+.preloarder span:nth-child(3){
+	transform:rotate(120deg) skewY(10deg);
+}
+.preloarder span:nth-child(4){
+	transform:rotate(180deg) skewY(10deg);
+}
+.preloarder span:nth-child(5){
+	transform:rotate(240deg) skewY(10deg);
+}
+.preloarder span:last-child{
+	transform:rotate(300deg) skewY(10deg);
+}
+@keyframes Loading{
+	0%{
+	 	transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
